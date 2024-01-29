@@ -43,6 +43,8 @@ Saturation is the percentage of resources being used. If the CPU/Memory usage is
 ## Create a Dashboard to measure our SLIs
 *TODO:* Create a dashboard to measure the uptime of the frontend and backend services We will also want to measure to measure 40x and 50x errors. Create a dashboard that show these values over a 24 hour period and take a screenshot.
 
+![](answer-img/4_uptime_errors.PNG)
+
 ## Tracing our Flask App
 *TODO:*  We will create a Jaeger span to measure the processes on the backend. Once you fill in the span, provide a screenshot of it here. Also provide a (screenshot) sample Python file containing a trace and span code used to perform Jaeger traces on the backend service.
 
@@ -79,17 +81,27 @@ Description: We observed a new 404 Server Error in the backend, caused by a "err
 Latency: The response time of requests should less than 25ms within a month.
 Failure rate: Ensure that the status code 2xx rates are around 98%.
 Uptime: Uptime nedd to be approximate 99 percent within a month and response time should be around 500 milliseconds.
+Saturation: average CPU usage should be less than 95% within a month.
+
 
 ## Building KPIs for our plan
 *TODO*: Now that we have our SLIs and SLOs, create a list of 2-3 KPIs to accurately measure these metrics as well as a description of why those KPIs were chosen. We will make a dashboard for this, but first write them down here.
 
-Latency: Response time.
-Failure rate: Errors per second/response rate per second.
-Uptime: Sucessful requests during pod uptime.
-Network capcity: successful request per second/request per second.
-Resource capcity: CPU, RAM usage per pod.
+Latency: Response time was chosen as indicator, fast response ensures a great user experience.
+Failure rate: Errors per second/response rate per second. Errors should be indicated and fixed in a fast manner to ensure the best user exeperience.
+Uptime: Sucessful requests during pod uptime/successful request per second/request per second. Our system shouls be reliable for our users and do not have errors.
+Saturation: CPU usage/ Memory usage. Our services shouls have enough resources to run smoothly and bring the best customer experience.
 
 ## Final Dashboard
 *TODO*: Create a Dashboard containing graphs that capture all the metrics of your KPIs and adequately representing your SLIs and SLOs. Include a screenshot of the dashboard here, and write a text description of what graphs are represented in the dashboard.  
 
 ![](answer-img/9_grafana_dashboard.PNG)
+
+CPU Usage (for each container)
+Memory Usage (for each container)
+Response Times per Request (Frontend, Backend)
+Uptime (for each container)
+Average Response Time (Frontend+Backend)
+Request duration (Frontend+Backend)
+Count of response Types by status
+Errors 50x and 40x
