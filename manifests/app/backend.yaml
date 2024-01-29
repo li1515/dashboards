@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: ericcgu/backend
+        image: ihnatenkolv/backend-test
         imagePullPolicy: Always
         ports:
         - name: backendport

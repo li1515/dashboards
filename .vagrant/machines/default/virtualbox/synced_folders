@@ -1,1 +1,1 @@
-{"virtualbox":{"/vagrant":{"guestpath":"/vagrant","hostpath":"C:/DEV/CNAND_nd064_C4_Observability_Starter_Files/Project_Starter_Files-Building_a_Metrics_Dashboard","disabled":false,"__vagrantfile":true}}}
+{"virtualbox":{"/vagrant":{"guestpath":"/vagrant","hostpath":"C:/DEV/dashboards","disabled":false,"__vagrantfile":true}}}
