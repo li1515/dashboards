@@ -101,14 +101,12 @@ Saturation: CPU usage/ Memory usage. Our services shouls have enough resources t
 
 2. Memory Usage (for each container)
 
-3. Response Times per Request (Frontend, Backend)
+3. Uptime (for each container)
 
-4. Uptime (for each container)
+4. Average Response Time (Frontend+Backend)
 
-5. Average Response Time (Frontend+Backend)
+5. Request duration (Frontend+Backend)
 
-6. Request duration (Frontend+Backend)
-
-7. Count of response Types by status
+6. Count of response Types by status
 
 8. Errors 50x and 40x
