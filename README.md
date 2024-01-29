@@ -46,32 +46,50 @@ Saturation is the percentage of resources being used. If the CPU/Memory usage is
 ## Tracing our Flask App
 *TODO:*  We will create a Jaeger span to measure the processes on the backend. Once you fill in the span, provide a screenshot of it here. Also provide a (screenshot) sample Python file containing a trace and span code used to perform Jaeger traces on the backend service.
 
+![](answer-img/5_jaeger.PNG)
+![](answer-img/6_span.PNG)
+
 ## Jaeger in Dashboards
 *TODO:* Now that the trace is running, let's add the metric to our current Grafana dashboard. Once this is completed, provide a screenshot of it here.
+
+![](answer-img/7_grafana_jaeger.PNG)
 
 ## Report Error
 *TODO:* Using the template below, write a trouble ticket for the developers, to explain the errors that you are seeing (400, 500, latency) and to let them know the file that is causing the issue also include a screenshot of the tracer span to demonstrate how we can user a tracer to locate errors easily.
 
 TROUBLE TICKET
 
-Name:
+Name: 404 Error Backend API
 
-Date:
+Date: 29.01.2024, 13:33:01
 
-Subject:
+Subject: 404 Error Backend API 
 
-Affected Area:
+Affected Area: Errror page
 
-Severity:
+Severity: Medium
 
-Description:
+Description: We observed a new 404 Server Error in the backend, caused by a "errror" Post request.
 
+![](answer-img/8_jaeger_backend_error.PNG)
 
 ## Creating SLIs and SLOs
 *TODO:* We want to create an SLO guaranteeing that our application has a 99.95% uptime per month. Name four SLIs that you would use to measure the success of this SLO.
 
+Latency: The response time of requests should less than 25ms within a month.
+Failure rate: Ensure that the status code 2xx rates are around 98%.
+Uptime: Uptime nedd to be approximate 99 percent within a month and response time should be around 500 milliseconds.
+
 ## Building KPIs for our plan
 *TODO*: Now that we have our SLIs and SLOs, create a list of 2-3 KPIs to accurately measure these metrics as well as a description of why those KPIs were chosen. We will make a dashboard for this, but first write them down here.
 
+Latency: Response time.
+Failure rate: Errors per second/response rate per second.
+Uptime: Sucessful requests during pod uptime.
+Network capcity: successful request per second/request per second.
+Resource capcity: CPU, RAM usage per pod.
+
 ## Final Dashboard
 *TODO*: Create a Dashboard containing graphs that capture all the metrics of your KPIs and adequately representing your SLIs and SLOs. Include a screenshot of the dashboard here, and write a text description of what graphs are represented in the dashboard.  
+
+![](answer-img/9_grafana_dashboard.PNG)

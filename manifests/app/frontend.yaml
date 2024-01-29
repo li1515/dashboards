@@ -5,6 +5,9 @@ metadata:
   labels: 
     app: frontend
   annotations:
+    prometheus.io/scrape: 'true'
+    prometheus.io/path: /metrics
+    prometheus.io/port: frontend
     "sidecar.jaegertracing.io/inject": "true"
 spec:
   replicas: 1
@@ -18,7 +21,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: ihnatenkolv/frontend-test
+        image: catzzzlol/frontend:latest
         imagePullPolicy: Always
         ports:
         - name: frontendport
