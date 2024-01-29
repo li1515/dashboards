@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: catzzzlol/frontend:latest
+        image: ihnatenkolv/frontend-test
         imagePullPolicy: Always
         ports:
         - name: frontendport

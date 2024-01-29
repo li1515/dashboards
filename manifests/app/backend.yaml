@@ -20,7 +20,7 @@ spec:
       - env:
         - name: JAEGER_AGENT_HOST
           value: simplest-agent.observability.svc.cluster.local
-        image: catzzzlol/backend:latest
+        image: ihnatenkolv/backend-test
         imagePullPolicy: Always
         name: backend
         ports:
