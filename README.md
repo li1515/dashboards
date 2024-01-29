@@ -98,10 +98,17 @@ Saturation: CPU usage/ Memory usage. Our services shouls have enough resources t
 ![](answer-img/9_grafana_dashboard.PNG)
 
 CPU Usage (for each container)
+
 Memory Usage (for each container)
+
 Response Times per Request (Frontend, Backend)
+
 Uptime (for each container)
+
 Average Response Time (Frontend+Backend)
+
 Request duration (Frontend+Backend)
+
 Count of response Types by status
+
 Errors 50x and 40x
